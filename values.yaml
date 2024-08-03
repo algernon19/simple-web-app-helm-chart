@@ -1,0 +1,26 @@
+replicaCount: 3
+
+image:
+  repository: your-dockerhub-username/simple-web-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+mongodb:
+  image: mongo:4.4
+  replicaCount: 1
+  storageClass: longhorn
+  storageSize: 1Gi
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: true
+  annotations: {}
+  hosts:
+    - host: your-app-domain.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
