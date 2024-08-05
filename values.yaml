@@ -19,7 +19,7 @@ ingress:
   enabled: true
   annotations: {}
   hosts:
-    - host: your-app-domain.com
+    - host: tesztapp.teszt
       paths:
         - path: /
           pathType: Prefix

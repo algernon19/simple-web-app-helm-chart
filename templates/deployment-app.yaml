@@ -20,3 +20,7 @@ spec:
         env:
         - name: MONGO_URL
           value: mongodb://mongo:27017/myapp
+        - name: HOSTNAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
