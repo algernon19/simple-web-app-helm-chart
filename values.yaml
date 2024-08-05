@@ -5,21 +5,15 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 
-mongodb:
-  image: mongo:4.4
-  replicaSet:
-    enabled: true
-    name: rs0
-  replicaCount: 3  # MongoDB replikák száma
-  storageClass: longhorn
-  storageSize: 1Gi
-  rootUsername: your-root-username  # MongoDB root felhasználónév
-  rootPassword: your-root-password  # MongoDB root jelszó
-  database: your-database  # MongoDB alapértelmezett adatbázis
+mariadb:
+  host: mariadb-galera
+  user: root
+  password: 5PqLQBkfDA
+  database: mydatabase
 
 service:
   type: ClusterIP
-  port: 27017  # MongoDB alapértelmezett portja
+  port: 3000
 
 ingress:
   enabled: true
