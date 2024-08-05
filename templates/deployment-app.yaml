@@ -21,22 +21,22 @@ spec:
         - name: DB_HOST
           valueFrom:
             secretKeyRef:
-              name: db-secrets
+              name: mariadb-galera
               key: db_host
         - name: DB_USER
           valueFrom:
             secretKeyRef:
-              name: db-secrets
+              name: mariadb-galera
               key: db_user
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: db-secrets
-              key: db_password
+              name: mariadb-galera
+              key: mariadb-root-password
         - name: DB_NAME
           valueFrom:
             secretKeyRef:
-              name: db-secrets
+              name: mariadb-galera
               key: db_name
         - name: HOSTNAME
           valueFrom:
