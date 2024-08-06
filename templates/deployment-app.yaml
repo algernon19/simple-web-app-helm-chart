@@ -38,7 +38,7 @@ spec:
             secretKeyRef:
               name: mariadb-galera
               key: db_name
-        - name: HOSTNAME
+        - name: POD_NAME
           valueFrom:
             fieldRef:
               fieldPath: metadata.name
