@@ -7,7 +7,9 @@ image:
 
 service:
   type: LoadBalancer
-  port: 3000
+  port: 80
+  name: web-app
+  targetPort: 3000
 
 ingress:
   enabled: true

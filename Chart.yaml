@@ -1,5 +1,5 @@
 apiVersion: v2
 name: simple-web-app
-description: A simple web application with MongoDB
-version: 0.1.6
+description: A simple web application with MariaDB
+version: 0.1.7
 appVersion: "1.0"
