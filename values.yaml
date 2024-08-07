@@ -5,14 +5,8 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 
-mariadb:
-  host: mariadb-galera
-  user: root
-  password: 5PqLQBkfDA
-  database: mydatabase
-
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 3000
 
 ingress:
