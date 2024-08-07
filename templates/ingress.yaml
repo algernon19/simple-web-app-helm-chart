@@ -18,7 +18,7 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: web-app
+                name: {{ include "my-helm-chart.name" . }}
                 port:
                   number: 3000
           {{- end }}
