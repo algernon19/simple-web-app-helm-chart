@@ -28,7 +28,7 @@ spec:
             secretKeyRef:
               name: web-app
               key: db_user
-        - name: DB_PASSWORD
+        - name: mariadb-galera
           valueFrom:
             secretKeyRef:
               name: web-app
@@ -37,7 +37,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: web-app
-              key: db_name
+              key: DB_NAME
         - name: POD_NAME
           valueFrom:
             fieldRef:
