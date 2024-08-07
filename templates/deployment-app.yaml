@@ -28,10 +28,10 @@ spec:
             secretKeyRef:
               name: web-app
               key: db_user
-        - name: mariadb-galera
+        - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: web-app
+              name: mariadb-galera
               key: mariadb-root-password
         - name: DB_NAME
           valueFrom:
